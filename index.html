@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGLAP Strength Studio - Brand Strategy & Launch Plan</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: #f8f9fa;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 2rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            opacity: 0.9;
+            margin-bottom: 1.5rem;
+        }
+
+        nav {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background 0.3s ease;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            background: rgba(255,255,255,0.1);
+        }
+
+        /* Main Content */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        section {
+            background: white;
+            margin-bottom: 3rem;
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #2c3e50;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 3px solid #3498db;
+        }
+
+        h3 {
+            color: #2c3e50;
+            font-size: 1.5rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        h4 {
+            color: #34495e;
+            font-size: 1.2rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: #555;
+        }
+
+        ul, ol {
+            margin: 1rem 0 1rem 2rem;
+            color: #555;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Highlight Boxes */
+        .highlight-box {
+            background: #f0f8ff;
+            border-left: 4px solid #3498db;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+
+        .highlight-box h4 {
+            color: #2c3e50;
+            margin-top: 0;
+        }
+
+        .warning-box {
+            background: #fff8e1;
+            border-left: 4px solid #f39c12;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+
+        .success-box {
+            background: #e8f5e9;
+            border-left: 4px solid #27ae60;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+
+        /* Brand Name Cards */
+        .brand-names-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .brand-card {
+            background: #f8f9fa;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .brand-card:hover {
+            border-color: #3498db;
+            box-shadow: 0 4px 12px rgba(52, 152, 219, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .brand-card h4 {
+            color: #2c3e50;
+            font-size: 1.5rem;
+            margin: 0 0 1rem 0;
+        }
+
+        .brand-card .tagline {
+            font-style: italic;
+            color: #7f8c8d;
+            margin-bottom: 1rem;
+        }
+
+        .pros-cons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .pros, .cons {
+            padding: 1rem;
+            border-radius: 4px;
+        }
+
+        .pros {
+            background: #e8f5e9;
+        }
+
+        .cons {
+            background: #ffebee;
+        }
+
+        .pros h5, .cons h5 {
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .pros ul, .cons ul {
+            margin: 0;
+            padding-left: 1.2rem;
+            font-size: 0.9rem;
+        }
+
+        .pros li {
+            color: #27ae60;
+        }
+
+        .cons li {
+            color: #e74c3c;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+            margin: 2rem 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #3498db;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+            padding-left: 2rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2.5rem;
+            top: 0.3rem;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #3498db;
+            border: 3px solid white;
+            box-shadow: 0 0 0 2px #3498db;
+        }
+
+        .timeline-item h4 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        th {
+            background: #f8f9fa;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        tr:hover {
+            background: #f8f9fa;
+        }
+
+        /* Recommended Badge */
+        .recommended {
+            display: inline-block;
+            background: #27ae60;
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-left: 0.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content, main {
+                padding: 1rem;
+            }
+
+            section {
+                padding: 1.5rem;
+            }
+
+            nav {
+                gap: 1rem;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .brand-names-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pros-cons {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>SIGLAP Strength Studio</h1>
+            <p class="subtitle">Brand Strategy & Launch Marketing Plan</p>
+            <nav>
+                <a href="#overview">Overview</a>
+                <a href="#brand-strategy">Brand Strategy</a>
+                <a href="#brand-names">Brand Names</a>
+                <a href="#marketing-plan">Marketing Plan</a>
+                <a href="#budget">Budget & Metrics</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Overview Section -->
+        <section id="overview">
+            <h2>Project Overview</h2>
+            
+            <h3>Current Situation</h3>
+            <div class="highlight-box">
+                <h4>GoFit Toa Payoh - Your Foundation</h4>
+                <ul>
+                    <li>Membership-driven model with 400+ contracts</li>
+                    <li>PT packages generating 2x membership revenue (strong demand for personalized service)</li>
+                    <li>3 years operational, profitable with healthy margins</li>
+                    <li>24/7 self-service positioning</li>
+                </ul>
+            </div>
+
+            <h3>New Venture - Key Differentiators</h3>
+            <ul>
+                <li><strong>Location:</strong> Siglap/East Coast (affluent, expat-heavy, family-oriented demographic)</li>
+                <li><strong>Space:</strong> 1,600 sqft with shower room at 77 @ East Coast condominium</li>
+                <li><strong>Concept:</strong> Strength training + physiotherapy fusion</li>
+                <li><strong>Focus:</strong> Premium 1-to-1 and semi-private training</li>
+                <li><strong>Target:</strong> Maintenance, elevation, rehabilitation for affluent individuals</li>
+            </ul>
+
+            <h3>Strategic Positioning</h3>
+            <p><strong>Premium strength and recovery studio</strong> - not a traditional gym. The combination of strength training and physiotherapy occupies valuable middle ground where performance meets rehabilitation.</p>
+
+            <div class="success-box">
+                <h4>Positioning Statement</h4>
+                <p>"Where strength meets science" - A specialized training and recovery studio that combines evidence-based strength programming with physiotherapy expertise to help established professionals and active adults train smarter, recover faster, and build lasting resilience.</p>
+            </div>
+        </section>
+
+        <!-- Brand Strategy Section -->
+        <section id="brand-strategy">
+            <h2>Proposed Brand Strategy</h2>
+
+            <h3>Target Customer Profile</h3>
+            <ul>
+                <li><strong>Age:</strong> 35-60 years old</li>
+                <li><strong>Demographics:</strong> Affluent professionals and families in East Coast corridor</li>
+                <li><strong>Psychographics:</strong>
+                    <ul>
+                        <li>Previous gym-goers dealing with injuries or age-related concerns</li>
+                        <li>Athletes/active individuals needing rehabilitation</li>
+                        <li>Time-poor individuals willing to pay premium for results</li>
+                        <li>Preventative health-conscious segment</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>Revenue Model Recommendations</h3>
+            <p>Given GoFit's experience where PT packages outperform memberships 2:1:</p>
+            <ol>
+                <li><strong>Primary Revenue:</strong> Semi-Private Training Sessions (2-4 people) - Higher margin than 1-to-1, builds community</li>
+                <li><strong>Premium Revenue:</strong> 1-to-1 Training + Physio Packages - Flagship offering</li>
+                <li><strong>Foundation Revenue:</strong> Limited Membership Access - 50-100 members for off-peak hours</li>
+                <li><strong>Ancillary:</strong> Assessment & Programming - Initial consultations, movement assessments</li>
+            </ol>
+
+            <h3>Operational Model</h3>
+            <ul>
+                <li><strong>Hours:</strong> Appointment-based (not 24/7)</li>
+                <li><strong>Peak times:</strong> 6-9am, 12-2pm, 6-9pm</li>
+                <li><strong>Staffing:</strong> Dual-credentialed trainers (strength + physio background) or partnerships with physios</li>
+                <li><strong>Capacity:</strong> 6-8 training slots per day max to maintain premium positioning</li>
+            </ul>
+
+            <h3>Key Brand Pillars</h3>
+            <div class="brand-names-grid">
+                <div class="brand-card">
+                    <h4>Expertise</h4>
+                    <p>Qualified physios and specialized strength coaches delivering evidence-based programming.</p>
+                </div>
+                <div class="brand-card">
+                    <h4>Personalization</h4>
+                    <p>No cookie-cutter programs. Every plan tailored to individual bodies and goals.</p>
+                </div>
+                <div class="brand-card">
+                    <h4>Longevity</h4>
+                    <p>Training for life, not just aesthetics. Building resilience that lasts decades.</p>
+                </div>
+                <div class="brand-card">
+                    <h4>Science-backed</h4>
+                    <p>Evidence-based programming and recovery protocols, not fitness trends.</p>
+                </div>
+            </div>
+
+            <h3>Pricing Strategy</h3>
+            <p>Premium positioning 30-50% above standard PT rates in Singapore. The physio integration justifies higher pricing and attracts clients who view this as healthcare investment, not gym expense.</p>
+
+            <h3>Service Menu Structure</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Service Tier</th>
+                        <th>Description</th>
+                        <th>Revenue Priority</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Movement Assessment</strong></td>
+                        <td>60min comprehensive screen, injury history, goal-setting ($200 value)</td>
+                        <td>Lead Generation</td>
+                    </tr>
+                    <tr>
+                        <td><strong>1-to-1 Training</strong></td>
+                        <td>Solo Track - Premium personalized training</td>
+                        <td>High</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Semi-Private (2-4 pax)</strong></td>
+                        <td>Duo/Crew Track - Community + personalization</td>
+                        <td>Primary</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Recovery Sessions</strong></td>
+                        <td>Physio-led manual therapy + corrective exercise</td>
+                        <td>Medium</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Programming Only</strong></td>
+                        <td>Monthly custom program, bi-weekly check-ins, video review</td>
+                        <td>Ancillary</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Brand Names Section -->
+        <section id="brand-names">
+            <h2>Brand Name Options</h2>
+
+            <div class="warning-box">
+                <h4>KINETIC Assessment Summary</h4>
+                <p><strong>Legal Status:</strong> No direct trademark conflict in Singapore IPOS registry. Kinetics Climbing Gym exists but in different category. Kinetic X Fitness permanently closed.</p>
+                <p><strong>Strategic Concerns:</strong> Heavily saturated globally (20+ fitness/physio businesses). Requires more SEO investment. Alternative spellings (KINETIK, KYNETIC) NOT recommended due to spelling confusion, unprofessional perception, and SEO issues.</p>
+                <p><strong>Verdict:</strong> Viable with strong differentiator (e.g., "KINETIC Strength Studio"), but more distinctive names offer easier market positioning.</p>
+            </div>
+
+            <h3>Tier 1 - Recommended Names</h3>
+
+            <div class="brand-names-grid">
+                <div class="brand-card">
+                    <h4>FORGE Strength Studio <span class="recommended">TOP CHOICE</span></h4>
+                    <p class="tagline">"Forged for Life"</p>
+                    <p><strong>Rationale:</strong> "Forge" evokes craftsmanship, resilience, rebuilding - perfect for rehab + strength combo. Suggests transformation through deliberate, expert work.</p>
+                    <div class="pros-cons">
+                        <div class="pros">
+                            <h5>Pros</h5>
+                            <ul>
+                                <li>Strong brand personality</li>
+                                <li>Differentiates from clinical feel</li>
+                                <li>Unique in Singapore</li>
+                                <li>Premium craft associations</li>
+                                <li>Clean SEO opportunity</li>
+                            </ul>
+                        </div>
+                        <div class="cons">
+                            <h5>Cons</h5>
+                            <ul>
+                                <li>Doesn't explicitly mention physio</li>
+                                <li>May feel masculine-leaning</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="brand-card">
+                    <h4>KINETIC Strength Studio</h4>
+                    <p class="tagline">"Movement. Mastered."</p>
+                    <p><strong>Rationale:</strong> Relates to movement science, bridges athletic and clinical. Scientific credibility with professional warmth.</p>
+                    <div class="pros-cons">
+                        <div class="pros">
+                            <h5>Pros</h5>
+                            <ul>
+                                <li>Scientific credibility</li>
+                                <li>Clear movement focus</li>
+                                <li>Professional feel</li>
+                                <li>No trademark conflict</li>
+                            </ul>
+                        </div>
+                        <div class="cons">
+                            <h5>Cons</h5>
+                            <ul>
+                                <li>Globally saturated</li>
+                                <li>Higher SEO competition</li>
+                                <li>Local climbing gym confusion</li>
+                                <li>Requires bigger marketing budget</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="brand-card">
+                    <h4>APEX Performance & Rehab</h4>
+                    <p class="tagline">"Peak Strength. Lasting Recovery."</p>
+                    <p><strong>Rationale:</strong> "Apex" signals peak performance and premium positioning. Dual naming clearly communicates both services.</p>
+                    <div class="pros-cons">
+                        <div class="pros">
+                            <h5>Pros</h5>
+                            <ul>
+                                <li>Clear service indication</li>
+                                <li>Aspirational positioning</li>
+                                <li>Professional credibility</li>
+                                <li>Works well verbally</li>
+                            </ul>
+                        </div>
+                        <div class="cons">
+                            <h5>Cons</h5>
+                            <ul>
+                                <li>"Apex" somewhat common</li>
+                                <li>Longer name</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="brand-card">
+                    <h4>RESILIENCE Strength & Physio</h4>
+                    <p class="tagline">"Build Strength That Lasts"</p>
+                    <p><strong>Rationale:</strong> Speaks directly to target - people rebuilding, maintaining, preventing decline. Emotionally resonant for 40+ demographic.</p>
+                    <div class="pros-cons">
+                        <div class="pros">
+                            <h5>Pros</h5>
+                            <ul>
+                                <li>Clear dual offering</li>
+                                <li>Emotional connection</li>
+                                <li>Premium feel</li>
+                                <li>Longevity positioning</li>
+                            </ul>
+                        </div>
+                        <div class="cons">
+                            <h5>Cons</h5>
+                            <ul>
+                                <li>Longer name</li>
+                                <li>Slightly medical sounding</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h3>Tier 2 - Alternative Options</h3>
+            <ul>
+                <li><strong>VECTOR Strength & Physio</strong> - Force direction concept, technical/scientific credibility</li>
+                <li><strong>MOMENTUM Strength Studio</strong> - Physics connection, suggests progressive results</li>
+                <li><strong>CALIBRE Performance Studio</strong> - Premium quality connotation, professional/refined</li>
+                <li><strong>STRIDE Performance Studio</strong> - Modern, suggests progress and methodology</li>
+                <li><strong>ELEVATE Strength Collective</strong> - Premium positioning, community feel</li>
+                <li><strong>FOUNDATION Training & Rehab</strong> - Emphasizes building proper movement patterns</li>
+            </ul>
+        </section>
+
+        <!-- Marketing Plan Section -->
+        <section id="marketing-plan">
+            <h2>Launch Marketing Plan - East Coast Market</h2>
+
+            <h3>Phase 1: Pre-Launch (8-10 weeks before opening)</h3>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h4>Week 1-3: Foundation Building</h4>
+                    <p><strong>1. Brand Identity Rollout</strong></p>
+                    <ul>
+                        <li>Logo, color palette, brand guidelines finalized</li>
+                        <li>Website development begins (live 4 weeks pre-launch)</li>
+                        <li>Social media handles secured (Instagram, Facebook)</li>
+                        <li>Google Business Profile created</li>
+                    </ul>
+
+                    <p><strong>2. Founding Member Program</strong></p>
+                    <ul>
+                        <li>Create exclusive "Founding Member" offer: 50 spots only</li>
+                        <li>Benefits: Locked-in rates for 12 months, priority booking, complimentary movement assessment ($200 value)</li>
+                        <li>Pricing: 20% discount on package rates for first 50 sign-ups</li>
+                        <li><strong>Goal:</strong> Secure 30-40 commitments before opening, generate pre-launch revenue</li>
+                    </ul>
+
+                    <p><strong>3. Strategic Partnerships</strong></p>
+                    <ul>
+                        <li>East Coast orthopedic/sports medicine clinics (referral agreements)</li>
+                        <li>Siglap/Marine Parade family doctors</li>
+                        <li>Local sports clubs (cycling, running, tennis)</li>
+                        <li>Yoga/Pilates studios (complementary services)</li>
+                        <li>Premium lifestyle businesses (cafes, wellness centers)</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <h4>Week 4-6: Awareness Generation</h4>
+                    <p><strong>1. Hyper-Local Digital Targeting</strong></p>
+                    <ul>
+                        <li>Facebook/Instagram Ads: Geo-targeted within 3km radius of Siglap</li>
+                        <li>Audience: Ages 35-60, interests in fitness/health/wellness</li>
+                        <li>Budget: $1,500-2,000/month</li>
+                        <li>Creative: Brand story, founder story, facility sneak peeks</li>
+                        <li>Lead magnet: Free movement assessment - capture 100+ leads</li>
+                    </ul>
+
+                    <p><strong>2. Content Marketing Launch</strong></p>
+                    <p>Instagram content pillars:</p>
+                    <ul>
+                        <li>Education: "Common strength mistakes after 40"</li>
+                        <li>Transformation: "Rebuilding after injury" stories</li>
+                        <li>Behind-the-scenes: Facility build-out, equipment arrival</li>
+                        <li>Expert tips: Short-form physio/training advice</li>
+                        <li>Post frequency: 4-5x per week</li>
+                        <li>Reels/video content: 2-3x per week</li>
+                    </ul>
+
+                    <p><strong>3. PR & Media Outreach</strong></p>
+                    <ul>
+                        <li>Press release: Straits Times, 8Days Singapore, Honey Combers</li>
+                        <li>Angle: "New hybrid strength-physio studio brings personalized approach to East Coast"</li>
+                        <li>Pitch lifestyle/wellness writers for feature stories</li>
+                    </ul>
+
+                    <p><strong>4. Community Engagement</strong></p>
+                    <ul>
+                        <li>Sponsor local East Coast events (parkrun, community activities)</li>
+                        <li>Attendance at East Coast condo events/markets</li>
+                        <li>Coffee shop partnerships for leaflet distribution</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <h4>Week 7-8: Conversion Push</h4>
+                    <p><strong>1. Open House Events</strong> (2 weekends before launch)</p>
+                    <ul>
+                        <li>Saturday/Sunday afternoon sessions</li>
+                        <li>Free mini-assessments (15-min movement screens)</li>
+                        <li>Facility tours</li>
+                        <li>Meet the trainers/physios</li>
+                        <li>Special opening week offers for attendees</li>
+                        <li><strong>Goal:</strong> 100+ visitors, 20-30 package sales</li>
+                    </ul>
+
+                    <p><strong>2. Influencer/Ambassador Seeding</strong></p>
+                    <ul>
+                        <li>Identify 5-10 micro-influencers in East Coast (3k-15k followers)</li>
+                        <li>Offer complimentary training packages for authentic content</li>
+                        <li>Focus: Parents, fitness enthusiasts, professionals 35-55</li>
+                        <li>Not just "fitness influencers" - lifestyle, wellness, local personalities</li>
+                    </ul>
+
+                    <p><strong>3. Email Marketing Campaign</strong></p>
+                    <ul>
+                        <li>Weekly emails to growing lead list</li>
+                        <li>Content: Educational tips, opening updates, exclusive offers</li>
+                        <li>Countdown sequence in final 2 weeks</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>Phase 2: Grand Opening (Week of Launch)</h3>
+
+            <div class="highlight-box">
+                <h4>Opening Week Strategy</h4>
+                
+                <p><strong>1. Soft Opening (First 3 days - Wed/Thu/Fri)</strong></p>
+                <ul>
+                    <li>Founding members only</li>
+                    <li>Iron out operational kinks</li>
+                    <li>Capture testimonial content</li>
+                </ul>
+
+                <p><strong>2. Official Launch (Saturday)</strong></p>
+                <ul>
+                    <li>Grand opening event: 10am-4pm</li>
+                    <li>Free assessments, facility tours, live demonstrations</li>
+                    <li>Local partnerships present (referral booths)</li>
+                    <li>Media attendance</li>
+                    <li>Special launch packages (48-hour flash sale)</li>
+                </ul>
+
+                <p><strong>3. Opening Week Promotion</strong></p>
+                <ul>
+                    <li>"Launch Week Special": 15% off all packages booked within 7 days</li>
+                    <li>Daily social media content: client experiences, facility showcase</li>
+                    <li>Google Ads launch targeting "physiotherapy Siglap", "personal training East Coast"</li>
+                </ul>
+            </div>
+
+            <h3>Phase 3: Post-Launch (Month 2-3)</h3>
+
+            <h4>Month 2: Momentum Building</h4>
+            <ul>
+                <li><strong>Referral Program:</strong> "Refer a friend, both get 1 free session" - Limited to first 50 referrals</li>
+                <li><strong>Corporate Partnerships:</strong> Target CBD/Marina Bay companies, lunch-time training slots</li>
+                <li><strong>Content Expansion:</strong> Client success stories (video), educational workshops, Google Business reviews</li>
+                <li><strong>Paid Advertising:</strong> Analyze first month data, shift budget to best-performing channels, retargeting campaigns</li>
+            </ul>
+
+            <h4>Month 3: Community & Retention</h4>
+            <ul>
+                <li><strong>Member Events:</strong> Monthly community workout or wellness workshop</li>
+                <li><strong>Partnership Activation:</strong> Joint events with clinic partners, cross-promotional campaigns</li>
+                <li><strong>PR Push Round 2:</strong> Success stories for media, "3 Months In" update features</li>
+            </ul>
+        </section>
+
+        <!-- Budget & Metrics Section -->
+        <section id="budget">
+            <h2>Budget Allocation & Success Metrics</h2>
+
+            <h3>First 3 Months Marketing Budget: $15,000-20,000</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Amount</th>
+                        <th>Percentage</th>
+                        <th>Purpose</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Digital Advertising</td>
+                        <td>$6,000-8,000</td>
+                        <td>40%</td>
+                        <td>Facebook/Instagram ads, Google Ads, retargeting</td>
+                    </tr>
+                    <tr>
+                        <td>Events & Activations</td>
+                        <td>$4,000-5,000</td>
+                        <td>25%</td>
+                        <td>Open house, grand opening, community events</td>
+                    </tr>
+                    <tr>
+                        <td>Content Creation</td>
+                        <td>$2,000-3,000</td>
+                        <td>15%</td>
+                        <td>Photography, videography, graphic design</td>
+                    </tr>
+                    <tr>
+                        <td>PR & Partnerships</td>
+                        <td>$1,500-2,000</td>
+                        <td>10%</td>
+                        <td>Media outreach, partnership development</td>
+                    </tr>
+                    <tr>
+                        <td>Print/Collateral</td>
+                        <td>$1,000-1,500</td>
+                        <td>7%</td>
+                        <td>Business cards, brochures, signage</td>
+                    </tr>
+                    <tr>
+                        <td>Contingency</td>
+                        <td>$500-1,000</td>
+                        <td>3%</td>
+                        <td>Unexpected opportunities/needs</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Success Metrics (First 3 Months)</h3>
+
+            <div class="brand-names-grid">
+                <div class="brand-card">
+                    <h4>Primary KPIs</h4>
+                    <ul>
+                        <li>80-100 active clients (packages + memberships)</li>
+                        <li>$40,000-60,000 in package sales</li>
+                        <li>50+ Google/Facebook 5-star reviews</li>
+                        <li>1,500+ Instagram followers</li>
+                        <li>30%+ client acquisition from referrals by Month 3</li>
+                    </ul>
+                </div>
+
+                <div class="brand-card">
+                    <h4>Secondary KPIs</h4>
+                    <ul>
+                        <li>Email list: 500+ subscribers</li>
+                        <li>Website traffic: 1,000+ monthly visitors</li>
+                        <li>Clinic referral partnerships: 3-5 active</li>
+                        <li>Media mentions: 3-5 features</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>Quick Wins for Immediate Action</h3>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h4>This Week</h4>
+                    <p>Secure social media handles, start building pre-launch email list</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>Week 2</h4>
+                    <p>Launch "Founding Member" landing page with early-bird offer</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>Week 3</h4>
+                    <p>Identify and reach out to first 3 partnership targets</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>Week 4</h4>
+                    <p>Begin Instagram content (even during build-out phase - build anticipation)</p>
+                </div>
+            </div>
+
+            <div class="success-box">
+                <h4>Competitive Differentiation Summary</h4>
+                <ul>
+                    <li><strong>vs. Traditional Gyms:</strong> Expert-led training studio where every session is guided and personalized</li>
+                    <li><strong>vs. Boutique Studios:</strong> Science-backed individualization, not templated group classes</li>
+                    <li><strong>vs. Physiotherapy Clinics:</strong> Build beyond recovery—create strength and resilience that prevents re-injury</li>
+                    <li><strong>vs. Premium PT:</strong> Combine strength coaching expertise with physiotherapy knowledge</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Next Steps Section -->
+        <section>
+            <h2>Recommended Next Steps</h2>
+
+            <div class="highlight-box">
+                <h4>Critical Decisions Required</h4>
+                <ol>
+                    <li><strong>Finalize Brand Name:</strong> Choose from recommended options (FORGE, KINETIC, APEX, etc.)</li>
+                    <li><strong>Commission Brand Identity:</strong> Logo design, color palette, typography system</li>
+                    <li><strong>Secure Digital Assets:</strong> Domain name, social media handles (@[brandname].sg)</li>
+                    <li><strong>Legal Registration:</strong> Business name registration, trademark filing</li>
+                    <li><strong>Website Development:</strong> Start development for launch 4 weeks pre-opening</li>
+                </ol>
+            </div>
+
+            <h3>Timeline for Brand Development</h3>
+
+            <h4>Immediate (Week 1-2)</h4>
+            <ul>
+                <li>Finalize exact brand name</li>
+                <li>Commission logo design (provide brand brief to designer)</li>
+                <li>Secure domain and social handles</li>
+                <li>Register business name</li>
+            </ul>
+
+            <h4>Short-term (Week 3-6)</h4>
+            <ul>
+                <li>Complete visual identity system</li>
+                <li>Website design and development</li>
+                <li>Physical space branding (signage, vinyl graphics)</li>
+                <li>Marketing collateral design</li>
+                <li>Staff uniform/apparel decisions</li>
+            </ul>
+
+            <h4>Medium-term (Week 7-12)</h4>
+            <ul>
+                <li>Photography/videography shoot of facility</li>
+                <li>Content library creation</li>
+                <li>Google Business Profile optimization</li>
+                <li>Partnership materials development</li>
+                <li>Launch campaign assets production</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 SIGLAP Strength Studio Brand Strategy Document</p>
+        <p>Prepared for: Jianshenfang Pte Ltd</p>
+    </footer>
+
+    <script>
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add active state to navigation based on scroll position
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('nav a');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.style.background = '';
+                if (link.getAttribute('href').slice(1) === current) {
+                    link.style.background = 'rgba(255,255,255,0.2)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
